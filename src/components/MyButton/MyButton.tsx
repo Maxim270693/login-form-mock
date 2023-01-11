@@ -6,13 +6,13 @@ type ButtonType = {
     className: string
 };
 
-const MyButton = ({ children, type, className }: ButtonType) => {
+const MyButton = React.memo(({ children, type, className }: ButtonType) => {
 
     return (
         <button type={type} className={className}>
             {children}
         </button>
     );
-};
+});
 
 export default MyButton;

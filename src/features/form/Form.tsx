@@ -4,6 +4,7 @@ import MyInput from "../../components/MyInput/MyInput";
 import MyButton from "../../components/MyButton/MyButton";
 
 import style from './Form.module.css';
+import axios from "axios";
 
 const Form = () => {
     const [inputForm, setInputForm] = useState({
@@ -36,6 +37,15 @@ const Form = () => {
             return setPasswordError("Обязательное поле")
         } else if (password.length < 8) {
             return setPasswordError('Пароль не может быть менее 8 сисмволов')
+        }
+
+        try {
+            const response = await axios.post("/login", inputForm)
+            if (response && response.status === 201) {
+                alert('Вы вошли в систему')
+            }
+        } catch (e) {
+            alert('Недействительные учетные данные')
         }
     }
 
