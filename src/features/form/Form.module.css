@@ -1,0 +1,23 @@
+.input,
+.error {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding: 5px;
+    margin-top: 5px;
+}
+
+.error {
+    border: 1px solid red;
+}
+
+.btn {
+    margin: 50px 0;
+    color: #fff;
+    background: #5757ee;
+    padding: 7px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    letter-spacing: 0.04em;
+}
