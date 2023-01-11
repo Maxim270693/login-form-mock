@@ -6,8 +6,12 @@ import './App.css';
 
 function App() {
     return (
-        <div className="App">
-            <Form/>
+        <div className="AppWrapper">
+            <div className="App">
+                <h1>Вход</h1>
+                <p>Для сущесвующих пользователей</p>
+                <Form/>
+            </div>
         </div>
     );
 }

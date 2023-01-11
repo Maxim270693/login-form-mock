@@ -1,5 +1,7 @@
 import React, {ChangeEvent, FormEvent, useState} from 'react';
+
 import MyInput from "../../components/MyInput/MyInput";
+import MyButton from "../../components/MyButton/MyButton";
 
 import style from './Form.module.css';
 
@@ -58,7 +60,8 @@ const Form = () => {
                          error={passwordError}
                          type="password"
                 />
-                <button type="submit" className={style.btn}>Войти в систему</button>
+
+                <MyButton type="submit" className={style.btn}>Войти в систему</MyButton>
             </form>
         </div>
     );
